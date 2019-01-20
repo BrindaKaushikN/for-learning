@@ -1,0 +1,82 @@
+<html xmlns:color="http://www.w3.org/1999/xhtml">
+    <head>
+        <title> ShopCart </title>
+    </head>
+    <style>
+	#header{
+	            margin:0;
+				top:0;
+                left:0;
+				position:fixed;
+				background-color:indigo;
+				width:100%;
+				height:90px;
+				text-align: center;
+				color:lavenderblush;
+				font-size: 30px;
+
+    }
+	
+    #login{
+            text-align: center;
+            font-family: Georgia;
+            font-size: 25px;
+            padding: 15px;
+			color:indigo;
+
+    }
+    button {
+            background-color:darkcyan;
+            color: white;
+            ruby-align: center;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 10%;
+    }
+
+		
+    </style>
+    </head>
+	
+    <script >
+    function funValidate() {
+        debugger;
+        var uname=document.getElementById('uname').value;
+        var pass=document.getElementById('pass').value;
+
+        if(uname == "super" && pass == "welcome23") {
+            window.location.href = "HomePage1.html";
+        }
+        else {
+            alert("Authentication Failed!Enter Valid Credentials");
+            return false;
+        }
+    }
+    function loginReset() {
+        document.getElementById('uname').value = '';
+        document.getElementById('pass').value = '';
+
+    }
+
+    </script>
+    <body bgcolor="blanchedalmond">
+    <div id="header">Welcome to ShopCart
+        </div>
+		<br><br><br><br><br>
+        <p align= "center" color="Blue"> Happy Shopping!! </p>
+        <div id="login">
+            <label for="uname">Username: </label>
+            <input type="text" id="uname" size="15" placeholder="Enter your login name" required> <br/> <br/>
+
+            <label for="pass">Password: </label>
+            <input type="password" id="pass" size="15" placeholder="Enter your Password" required> <br/> <br/>
+            <button type="submit" onclick="funValidate()"> Login </button>
+            <button  onclick="loginReset()"> Reset </button>
+
+
+
+        </div>
+</body>
+</html>
