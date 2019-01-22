@@ -68,6 +68,12 @@
         tr:nth-child(even) {
             background-color: black
         }
+        .logoutLblPos{
+
+            position:fixed;
+            right:10px;
+            top:5px;
+        }
 
 
     </style>
@@ -80,7 +86,15 @@
         <h1>SALES ORDER</h1>
     </marquee>
 
+    <form align="right" name="form1"  action="LoginPage.html">
+        <label class="logoutLblPos">
+            <input type="submit" id="submit2" value="Log Out">
+        </label>
+    </form>
+
 </div>
+
+
 
 <!-- Three columns -->
 <div class="row">
@@ -200,8 +214,7 @@
 
 
         <label for="eProductDescription">Product Description:</label>
-        <input type="text" id="eProductDescription" size="25" placeholder="Enter product description"
-               readonly="readonly"><br/> <br/>
+        <input type="text" id="eProductDescription" size="25" placeholder="Enter product description" readonly="readonly"><br/> <br/>
 
         <label for="eProductPrice">Product Price:</label>
         <input type="text" id="eProductPrice" size="25" placeholder="Enter product price" readonly="readonly"> <br/>
@@ -209,10 +222,15 @@
 
         <button type = "button" onclick="edit()">Edit</button>
         <button type = "button" onclick="removeOrder()">Remove</button>
+
+
     </div>
 </div>
 
 <script>
+
+
+
     function openTab(tabName) {
         var i, x;
         x = document.getElementsByClassName("containerTab");
